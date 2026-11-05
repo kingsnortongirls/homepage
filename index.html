@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102d59">
+<meta name="description" content="KNGS Computer Science learning hub. Access revision resources, assessment feedback and interactive teaching tools in one place.">
+<title>KNGS Computer Science | Learning Hub</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{--navy:#102d59;--blue:#185aa3;--ink:#172b45;--muted:#506782;--bg:#f2f6fc;--line:#d5e1ed;--white:#fff;--mint:#dff5ec;--green:#146c52}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #eeb943;outline-offset:4px}svg{display:block}h1,h2,h3,p{margin-top:0}.wrap{width:min(1100px,calc(100% - 36px));margin-inline:auto}
+.hero{position:relative;overflow:hidden;background:linear-gradient(122deg,#10294e 0%,#174678 58%,#1964a7 100%);color:#fff;padding:23px 0 93px}.hero:before{content:"";position:absolute;width:490px;height:490px;border-radius:50%;border:1px solid #ffffff30;top:-235px;right:-140px;box-shadow:0 0 0 80px #ffffff07,0 0 0 160px #ffffff05;pointer-events:none}.brand{display:flex;align-items:center;gap:12px;text-transform:uppercase;font-size:.74rem;letter-spacing:.10em;font-weight:800;color:#d9eaff}.brand-icon{display:grid;place-items:center;border:1px solid #ffffff55;background:#ffffff1a;border-radius:12px;width:42px;height:42px}.brand-icon svg{width:23px;height:23px}.hero-inner{position:relative;z-index:1}.hero-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;align-items:center;gap:44px;padding:48px 0 12px}.eyebrow{font-size:.77rem;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:#b8dbff;margin-bottom:12px}.hero h1{font-size:clamp(2.4rem,5.6vw,4.3rem);line-height:1.07;letter-spacing:-.05em;margin-bottom:18px}.hero h1 span{color:#b9deff}.hero-description{color:#e0edff;font-size:1.08rem;max-width:630px;margin-bottom:22px}.hero-tags{display:flex;gap:9px;flex-wrap:wrap}.hero-tags span{font-size:.77rem;border:1px solid #ffffff53;border-radius:50px;padding:5px 11px;background:#ffffff13;font-weight:700}.hero-art{border:1px solid #ffffff50;background:#ffffff13;border-radius:20px;padding:19px;backdrop-filter:blur(2px);box-shadow:0 16px 44px #03173325}.art-title{display:flex;align-items:center;gap:8px;color:#e4f1ff;font-size:.8rem;font-weight:800;margin-bottom:13px}.art-title svg{height:18px;width:18px}.art-line{background:#ffffffed;border-radius:12px;display:flex;gap:10px;align-items:center;padding:11px;color:#20456d;margin:8px 0;font-size:.82rem;font-weight:800;box-shadow:0 2px 7px #02183219}.art-line svg{width:22px;height:22px;color:#1e64a8}.art-line small{display:block;font-size:.68rem;font-weight:600;color:#667b92}.art-end{color:#c4ddf9;text-align:center;font-size:.74rem;padding-top:8px}
+main{position:relative;margin-top:-54px;padding-bottom:40px}.intro{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px 27px;display:flex;align-items:center;justify-content:space-between;gap:18px;box-shadow:0 9px 25px #092b5212}.intro h2{font-size:1.27rem;margin-bottom:4px;letter-spacing:-.02em}.intro p{color:var(--muted);font-size:.91rem;margin:0}.intro-badge{border:1px solid #c6e5d8;background:#e6f7ed;color:#13674b;border-radius:12px;text-align:center;min-width:110px;padding:9px 16px}.intro-badge strong{font-size:1.8rem;line-height:1.2;display:block}.intro-badge span{font-size:.74rem;font-weight:800}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:31px 1px 15px}.section-head h2{margin:0;font-size:1.5rem;letter-spacing:-.03em}.section-head p{color:var(--muted);margin:4px 0 0;font-size:.88rem}.section-head .side-note{font-size:.8rem;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.card{min-width:0;background:#fff;border:1px solid var(--line);border-radius:19px;padding:23px;display:flex;flex-direction:column;min-height:365px;box-shadow:0 3px 14px #163f5b0b;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 12px 29px #153c5c19;border-color:#a4c6e8}.card-header{display:flex;justify-content:space-between;align-items:center;gap:10px}.card-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center}.card-icon svg{height:27px;width:27px}.card.revision .card-icon{background:#e8f0fe;color:#245da5}.card.feedback .card-icon{background:#e5f5ef;color:#157457}.card.tools .card-icon{background:#fff1e5;color:#a35419}.card-kicker{font-size:.73rem;color:#54708c;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.card h3{font-size:1.46rem;line-height:1.2;letter-spacing:-.035em;margin:18px 0 9px}.card p{font-size:.9rem;color:var(--muted);margin-bottom:13px}.features{padding:0;list-style:none;margin:0 0 21px;display:grid;gap:8px;font-size:.84rem;color:#3b5570;flex:1}.features li{display:flex;align-items:flex-start;gap:9px}.features li svg{height:15px;width:15px;flex:none;margin-top:4px;color:#2978a3}.open-link{display:flex;align-items:center;justify-content:space-between;gap:12px;border-radius:11px;background:#185aa3;color:#fff;font-size:.9rem;font-weight:800;padding:12px 15px;text-decoration:none;transition:background .16s}.open-link:hover{background:#103f78}.open-link svg{width:18px;height:18px}.card.feedback .open-link{background:#166c55}.card.feedback .open-link:hover{background:#105441}.card.tools .open-link{background:#995517}.card.tools .open-link:hover{background:#783f10}
+.pathway{margin-top:33px;border:1px solid var(--line);border-radius:18px;background:#fff;padding:25px 28px}.pathway h2{font-size:1.25rem;margin:0 0 6px}.pathway>p{font-size:.89rem;color:var(--muted);margin-bottom:19px}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.step{padding:15px;border:1px solid #dae6f3;border-radius:13px;background:#f8fbff;display:flex;gap:11px;align-items:start}.number{display:grid;place-items:center;border-radius:9px;background:#e1eefb;color:#185a9e;width:31px;height:31px;flex:none;font-weight:900;font-size:.85rem}.step strong{font-size:.88rem;display:block}.step span{font-size:.8rem;color:var(--muted);display:block;margin-top:2px}
+.footer{border-top:1px solid var(--line);color:#58708a;padding:24px 0 32px;font-size:.79rem}.footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}.footer a{text-decoration:none;color:#1c5998}.footer a:hover{text-decoration:underline}
+@media(max-width:930px){.hero-layout{grid-template-columns:1fr}.hero-art{display:none}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:630px){.hero{padding-bottom:74px}.hero-layout{padding:36px 0 0}.brand{font-size:.68rem}.cards,.steps{grid-template-columns:1fr}.card{min-height:auto}.intro{padding:20px;align-items:start;flex-direction:column}.intro-badge{min-width:auto}.section-head{align-items:start}.section-head .side-note{display:none}.pathway{padding:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.open-link{transition:none}}
+@media print{.hero{background:#fff;color:var(--ink);padding:12px}.hero-description,.hero-tags,.hero-art,.open-link,.pathway{display:none!important}main{margin-top:0}.cards{grid-template-columns:repeat(3,1fr)}.card{min-height:0;box-shadow:none;break-inside:avoid}.brand,.eyebrow{color:var(--ink)}}
+</style>
+</head>
+<body>
+<svg style="display:none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3V10Z M9 20v-7h6v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-feedback" viewBox="0 0 24 24"><path d="M4 4h16v13H9l-5 4V4Z M8 11l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-tools" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m7 10 3 2-3 2m6 1h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-tick" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+<header class="hero">
+ <div class="wrap hero-inner">
+  <div class="brand"><span class="brand-icon"><svg aria-hidden="true"><use href="#i-home"/></svg></span>Kings Norton Girls' School · Computer Science</div>
+  <div class="hero-layout">
+   <div>
+    <p class="eyebrow">Welcome to your digital learning space</p>
+    <h1>Computer Science<br><span>Learning Hub</span></h1>
+    <p class="hero-description">Everything you need to revise, reflect on assessments and explore Computer Science in one place.</p>
+    <div class="hero-tags"><span>Years 7–9</span><span>GCSE</span><span>A Level</span><span>Learn at your own pace</span></div>
+   </div>
+   <div class="hero-art" aria-hidden="true">
+    <div class="art-title"><svg><use href="#i-home"/></svg> Your learning journey</div>
+    <div class="art-line"><svg><use href="#i-book"/></svg><div>Revise<small>Review the knowledge</small></div></div>
+    <div class="art-line"><svg><use href="#i-feedback"/></svg><div>Reflect<small>Find your next steps</small></div></div>
+    <div class="art-line"><svg><use href="#i-tools"/></svg><div>Explore<small>Practise interactively</small></div></div>
+    <div class="art-end">One starting point. Three ways to learn.</div>
+   </div>
+  </div>
+ </div>
+</header>
+<main class="wrap">
+ <section class="intro" aria-label="Welcome message">
+  <div><h2>Where would you like to go?</h2><p>Choose a hub below. All three are free to access and work on school computers, tablets and phones.</p></div>
+  <div class="intro-badge"><strong>3</strong><span>Learning hubs</span></div>
+ </section>
+ <div class="section-head"><div><h2>Explore your learning hubs</h2><p>Find the right resources for what you need to do today.</p></div><span class="side-note">Select a card to open a hub</span></div>
+ <section class="cards" aria-label="Learning hubs">
+  <article class="card revision">
+   <div class="card-header"><span class="card-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span><span class="card-kicker">Learn &amp; remember</span></div>
+   <h3>Revision Hub</h3>
+   <p>Build your knowledge and prepare confidently for assessments with independent revision resources.</p>
+   <ul class="features"><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Topic-by-topic revision</li><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Flashcards and activities</li><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Resources for different year groups</li></ul>
+   <a class="open-link" href="https://kingsnortongirls.github.io/revision/">Open Revision Hub <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </article>
+  <article class="card feedback">
+   <div class="card-header"><span class="card-icon"><svg aria-hidden="true"><use href="#i-feedback"/></svg></span><span class="card-kicker">Reflect &amp; improve</span></div>
+   <h3>Feedback Hub</h3>
+   <p>Use your marked assessments to celebrate strengths and work on personalised improvement tasks.</p>
+   <ul class="features"><li><svg aria-hidden="true"><use href="#i-tick"/></svg>WWW and HTI feedback</li><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Targeted improvement activities</li><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Printable feedback sheets</li></ul>
+   <a class="open-link" href="https://kingsnortongirls.github.io/feedback/">Open Feedback Hub <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </article>
+  <article class="card tools">
+   <div class="card-header"><span class="card-icon"><svg aria-hidden="true"><use href="#i-tools"/></svg></span><span class="card-kicker">Experiment &amp; apply</span></div>
+   <h3>Teaching Tools</h3>
+   <p>Discover how Computer Science works through interactive demonstrations, experiments and challenges.</p>
+   <ul class="features"><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Binary and data representation</li><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Interactive visual explanations</li><li><svg aria-hidden="true"><use href="#i-tick"/></svg>Self-checking practice questions</li></ul>
+   <a class="open-link" href="https://kingsnortongirls.github.io/teachingtools/">Open Teaching Tools <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </article>
+ </section>
+ <section class="pathway" aria-labelledby="pathway-heading">
+  <h2 id="pathway-heading">Not sure where to start?</h2>
+  <p>Try this simple learning cycle to help build your confidence and make progress.</p>
+  <div class="steps">
+   <div class="step"><span class="number">1</span><div><strong>Revise</strong><span>Use the Revision Hub to refresh your understanding.</span></div></div>
+   <div class="step"><span class="number">2</span><div><strong>Reflect</strong><span>Use the Feedback Hub to see what went well and what to improve.</span></div></div>
+   <div class="step"><span class="number">3</span><div><strong>Practise</strong><span>Use Teaching Tools to test and explore your understanding.</span></div></div>
+  </div>
+ </section>
+</main>
+<footer class="footer"><div class="wrap"><span>KNGS Computer Science · Learn · Reflect · Explore</span><span>Built for independent learning · No sign-in needed for this homepage</span></div></footer>
+</body></html>
